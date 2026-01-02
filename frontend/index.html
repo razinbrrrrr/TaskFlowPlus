@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskFlow+ Intelligence System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+  <h1>TaskFlow+</h1>
+</div>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <button onclick="showTab('tasks')" class="tabBtn active">Tasks</button>
+    <button onclick="showTab('dashboard')" class="tabBtn">Dashboard</button>
+    <button onclick="showTab('insights')" class="tabBtn">Insights</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <!-- TASK TAB -->
+    <div id="tasks" class="tab active">
+
+      <div class="row">
+
+        <div class="card">
+          <h2>Add Task</h2>
+
+          <input id="taskInput" placeholder="Task name">
+          <select id="category">
+            <option>Study</option>
+            <option>Assignment</option>
+            <option>Personal</option>
+          </select>
+
+          <select id="priority">
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+
+          <input id="dueDate" type="date">
+          <input id="time" type="number" placeholder="Estimated time (mins)">
+          
+          <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="card">
+          <h2>Tasks</h2>
+          <div id="list"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- DASHBOARD TAB -->
+    <div id="dashboard" class="tab">
+      <h2 class="center">Analytics Dashboard</h2>
+
+      <div class="dashRow">
+        <canvas id="pieChart"></canvas>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div id="riskBox" class="riskBox">
+        Risk Status: Calculating...
+      </div>
+    </div>
+
+    <!-- INSIGHTS TAB -->
+    <div id="insights" class="tab">
+      <h2 class="center">Motivation & Insights</h2>
+
+      <div class="card">
+        <h3 id="insightText">Insights load when tasks exist...</h3>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

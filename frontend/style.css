@@ -1,0 +1,145 @@
+/* BACKGROUND */
+body{
+  margin:0;
+  font-family:Poppins, Arial;
+  background: radial-gradient(circle at top, #1b2b4b, #050913);
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding:15px;
+  text-align:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* LAYOUT */
+.layout{
+  display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:180px;
+  padding:20px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(15px);
+  border-right:1px solid rgba(255,255,255,.1);
+  height:100vh;
+}
+
+.tabBtn{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  background:#0d1529;
+  color:white;
+  border:none;
+  margin-top:8px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.tabBtn:hover{
+  background:#15e6ff;
+  color:black;
+}
+.active{
+  background:#4cffc3 !important;
+  color:black;
+}
+
+/* MAIN AREA */
+.main{
+  flex:1;
+  padding:20px;
+}
+
+/* CARDS */
+.card{
+  background:rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:25px;
+  margin:10px;
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 30px cyan;
+}
+
+/* INPUT */
+input,select{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  margin-top:8px;
+  background:#0b132a;
+  color:white;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  margin-top:10px;
+  background:linear-gradient(90deg,#06c1ff,#4cff88);
+  cursor:pointer;
+  font-weight:bold;
+  transition:.3s;
+}
+button:hover{
+  transform:scale(1.05);
+  filter:brightness(1.2);
+}
+
+/* FLEX AREAS */
+.row{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.dashRow{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* TASK BOX */
+.taskBox{
+  background:#071020;
+  padding:10px;
+  border-radius:12px;
+  margin:6px 0;
+  transition:.3s;
+}
+.taskBox:hover{
+  transform:translateX(6px);
+  box-shadow:0 0 15px cyan;
+}
+
+/* RISK BOX */
+.riskBox{
+  font-size:25px;
+  width:430px;
+  margin:20px auto;
+  padding:20px;
+  text-align:center;
+  border-radius:12px;
+  box-shadow:0 0 25px cyan;
+}
+
+/* TABS */
+.tab{ display:none; }
+.tab.active{ display:block; }
+
+.center{ text-align:center; }
